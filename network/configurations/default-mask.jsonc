@@ -1,0 +1,30 @@
+{
+    "environment": {
+        "name": "mask"
+    },
+    "transformation": {
+        "name": "mask",
+        "options": {
+            "size": 25,
+            "step": 1,
+            "shuffle": true,
+            "save_image": false
+        }
+    },
+    "training": {
+        "model": {
+            "name": "mask",
+            "options": {
+                "alpha": 0.3,
+                "dropout_rate": 0.5,
+                "filter_factor": 1
+            }
+        },
+        "batch_size": 8,
+        "loss_function": "mean_squared_error_noaxis",
+        "optimizer": {
+            "name": "adam",
+            "lr": 0.0001
+        }
+    }
+}

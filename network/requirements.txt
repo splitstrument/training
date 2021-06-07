@@ -1,0 +1,16 @@
+keras
+argparse
+tensorflow
+Pillow
+matplotlib
+pydot
+numpy
+psutil
+commentjson
+gitpython
+colorama
+progressbar2
+mir_eval
+pytube
+librosa
+scikit-image

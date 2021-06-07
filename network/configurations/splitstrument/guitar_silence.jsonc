@@ -1,0 +1,43 @@
+{
+    "base": "default-hourglass.jsonc",
+    "collection": {
+	"name": "Guitar training with reduced silence in tracks",
+        "sample_rate": 22050,
+        "song_limit": 131,
+        "test_data_count": 0,
+        "test_frequency": 0,
+        "folders": [
+            {
+                "path": "/data/ba2/training_data/guitar_less_silence/tracks_22050hz/",
+                "ratio": 1
+            }
+        ]
+    },
+    "spectrogram_generation": {
+        "fft_length": 1536
+    },
+    "training": {
+        "epoch": {
+            "count": 36
+        },
+        "limit_items_per_song": 0,
+        "model": {
+            "options": {
+                "stacks": 6,
+                "initial_convolutions": {
+                    "batchnormalization": true,
+                    "dropoutfactor": 0.2
+                },
+                "hg_module": {
+                    "filters": 192,
+                    "batchnormalization": true,
+                    "dropoutfactor": 0.2
+                },
+                "hg_module_end": {
+                    "batchnormalization": true,
+                    "dropoutfactor": 0.2
+                }
+            }
+        }
+    }
+}

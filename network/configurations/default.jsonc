@@ -1,0 +1,28 @@
+{
+    "environment": {
+        "name": "default"
+    },
+    "transformation": {
+        "name": "window",
+        "options": {
+            "size": 64,
+            "step": 64,
+            "shuffle": true,
+            "save_audio": false
+        }
+    },
+    "training": {
+        "model": {
+            "name": "leakyrelu",
+            "alpha1": 0.1,
+            "alpha2": 0.01,
+            "dropout_rate": 0.2
+        },
+        "batch_size": 8,
+        "loss_function": "mean_squared_error",
+        "optimizer": {
+            "name": "adam",
+            "lr": 0.001
+        }
+    }
+}
