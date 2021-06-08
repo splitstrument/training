@@ -2,7 +2,7 @@
 
 Used to evaluate trainings with mir_eval, save the information and print it. `evaluation_calculator` runs evaluations
 and prints the results for any given run folder, and `evaluation_printer` can be used when information about a previous
-evaluation needs to be displayed. `evaluation_calculator` aditionally plots the training losses and instrument, mix and
+evaluation needs to be displayed. `evaluation_calculator` additionally plots the training losses and instrument, mix and
 predicted instrument stems. All are saved to the `plots` folder of each training folder. If a `target-folder` is
 specified, all relevant evaluation data including plots are copied there for easy access.
 

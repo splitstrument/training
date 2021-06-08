@@ -11,13 +11,16 @@ library versions on Python 3.8.
    * Only training of network and running a prediction is guaranteed to be adjusted properly
    * Evaluation is solved in separate code in folder `../evaluation`
 * Adjusted `train.py` to be able to train multiple configuration one after another
-* Created `api.py` to allow access to training and prediction from outside code
+* Created `api/prediction.py` to allow access to prediction from outside code
 * Adjusted `dataloader.py` to enable mixing of different datasets
     * For examples of mixed datasets see configurations in `configuration/splitstrument`
 
 # API
 
-TODO describe
+The file `api/prediction.py` allows outside code to setup a prediction engine and run predictions without having to know
+all internals of the code in `network`. A prediction can be started by calling `create_engine` with the path to some
+training folder and passing the resulting engine together with a mix as an STFT to `run_prediction`. The result will be
+two stems as audio data containing the separated instrument and all the other instruments.
 
 # Basic guitar prediction
 
